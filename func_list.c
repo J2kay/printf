@@ -61,6 +61,9 @@ int string_print(char *s)
 {
 	int n, tally = 0;
 
+	if (s == NULL)
+		return (-1);
+
 	for (n = 0; *s != '\0'; n++)
 	{
 		_print(*s);
