@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#define BUFFER 1024
 int _printf(const char *format, ...);
 
 int _print(int a);
