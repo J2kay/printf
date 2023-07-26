@@ -13,7 +13,7 @@ int _print(int a)
 
 
 /**
- * 2char_hexa - converts integers to hexadecimal
+ * char_hex - converts integers to hexadecimal
  * @n: input integer
  *
  * Return: tally
@@ -24,11 +24,10 @@ int char_hex(int n)
 	int tally = 0, i, j = 0;
 
 	char hexa_dec[] = "0123456789ABCDEF";
-	char store[3];
+	char store[3] = {'0', '0', '\0'};
 
-	store[0] = '0';
-	store[1] = '0';
-	store[2] = '\0';
+	if (n == 0)
+		_print('0');
 
 	if (n < 0)
 		return (1);
