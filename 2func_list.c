@@ -30,16 +30,15 @@ int char_hex(int n)
 	store[1] = '0';
 	store[2] = '\0';
 
-	if (n == '\0')
+	if (n < 0)
 		return (1);
-
 	while (n > 0)
 	{
 		store[j] = hexa_dec[n % 16];
 		n /= 16;
 		j++;
 	}
-	for (i = 1; i >= 0; i--)
+	for (i = 2; i >= 0; i--)
 	{
 		_print(store[i]);
 		tally++;
@@ -57,6 +56,8 @@ int cap_str(char *s)
 {
 	int n, tally = 0;
 
+	if (s == NULL)
+		return (1);
 	for (n = 0; s[n] != '\0'; n++)
 	{
 		if ((s[n] > 0 && s[n] < 33) || s[n] >= 127)
