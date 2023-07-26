@@ -27,5 +27,7 @@ int check_conv_sm(char conv, va_list vars)
 		tally += hexa_print(va_arg(vars, unsigned int), "0123456789abcdef");
 	else if (conv == 'X')
 		tally += hexa_print(va_arg(vars, unsigned int), "0123456789ABCDEF");
+	else if (conv == 'S')
+		tally += cap_str(va_arg(vars, char *));
 	return (tally);
 }
