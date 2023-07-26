@@ -16,4 +16,5 @@ int print_base(unsigned int n, int base);
 int hexa_print(unsigned int n, char *str);
 int char_hex(int n);
 int cap_str(char *s);
+int address(void *ptr);
 #endif

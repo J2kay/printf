@@ -27,7 +27,10 @@ int char_hex(int n)
 	char store[3] = {'0', '0', '\0'};
 
 	if (n == 0)
+	{
 		_print('0');
+		tally++;
+	}
 
 	if (n < 0)
 		return (1);
@@ -70,6 +73,44 @@ int cap_str(char *s)
 		_print(s[n]);
 		tally++;
 		}
+	}
+	return (tally);
+}
+
+/**
+ * address - prints the address of a pointer
+ * @ptr: void pointer
+ *
+ * Return: tally
+ */
+int address(void *ptr)
+{
+	int n, i = 0, tally = 0;
+	const char hexadecimal[] = "0123456789abcdef";
+	char store[18];
+
+	unsigned long temp = (unsigned long)ptr;
+
+
+	_print('0');
+	tally++;
+	_print('x');
+	tally++;
+
+	for (n = 15; n >= 0; n--)
+	{
+		store[n] = hexadecimal[temp % 16];
+		temp /= 16;
+	}
+
+
+	while (store[i] == '0' && i < 15)
+		i++;
+	while (i < 16)
+	{
+		_print(store[i]);
+		tally++;
+		i++;
 	}
 	return (tally);
 }
