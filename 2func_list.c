@@ -23,7 +23,7 @@ int char_hex(int n)
 {
 	int tally = 0, i, j = 0;
 
-	char hexa_dec[] = "0123456789ABCDE";
+	char hexa_dec[] = "0123456789ABCDEF";
 	char store[3];
 
 	store[0] = '0';
