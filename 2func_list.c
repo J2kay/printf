@@ -30,6 +30,9 @@ int char_hex(int n)
 	store[1] = '0';
 	store[2] = '\0';
 
+	if (n == '\0')
+		return (1);
+
 	while (n > 0)
 	{
 		store[j] = hexa_dec[n % 16];
