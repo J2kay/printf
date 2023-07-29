@@ -17,4 +17,5 @@ int hexa_print(unsigned int n, char *str);
 int char_hex(int n);
 int cap_str(char *s);
 int address(void *ptr);
+int str_rev(char *);
 #endif

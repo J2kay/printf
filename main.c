@@ -36,5 +36,6 @@ int main(void)
    printf("Address:[%p]\n", addr);
    _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    _printf("String:[%r]\n", "I am a string !");
   return (0);
 }

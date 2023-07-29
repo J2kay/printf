@@ -31,5 +31,7 @@ int check_conv_sm(char conv, va_list vars)
 		tally += cap_str(va_arg(vars, char *));
 	else if (conv == 'p')
 		tally += address(va_arg(vars, void *));
+	else if (conv == 'r')
+		tally += str_rev(va_arg(vars, char *));
 	return (tally);
 }

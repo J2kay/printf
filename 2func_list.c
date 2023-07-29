@@ -114,3 +114,26 @@ int address(void *ptr)
 	}
 	return (tally);
 }
+
+/**
+ * str_rev - prints string in reverse
+ * @s: string pointer
+ *
+ * Return: tally
+ */
+int str_rev(char *s)
+{
+	int i, n, len = 0, tally = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		len++;
+	}
+
+	for (n = len; n >= 0; n--)
+	{
+		_print(s[n]);
+		tally++;
+	}
+	return (tally);
+}
