@@ -118,11 +118,6 @@ int hexa_print(unsigned int n, char *str)
 
 	len = 7;
 	tally = 0;
-	if (n == 0)
-	{
-		arr[len] = 0;
-		arr[len++] = 0;
-	}
 
 	while (n > 0 && len >= 0)
 	{
