@@ -120,8 +120,8 @@ int hexa_print(unsigned int n, char *str)
 	tally = 0;
 	if (n == 0)
 	{
-		_print(0);
-		_print(0);
+		arr[len] = 0;
+		arr[len++] = 0;
 	}
 
 	while (n > 0 && len >= 0)
