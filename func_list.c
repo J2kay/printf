@@ -62,7 +62,7 @@ int string_print(char *s)
 	int n, tally = 0;
 
 	if (s == NULL)
-		return (NULL);
+		return (1);
 
 	for (n = 0; *s != '\0'; n++)
 	{
@@ -118,7 +118,11 @@ int hexa_print(unsigned int n, char *str)
 
 	len = 7;
 	tally = 0;
-
+	if (n == 0)
+	{
+		arr[len] = 0;
+		arr[len++] = 0;
+	}
 	while (n > 0 && len >= 0)
 	{
 		arr[len] = str[n % 16];

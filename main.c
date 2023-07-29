@@ -34,5 +34,7 @@ int main(void)
   _printf("%S\n", "Best\nSchool");
   _printf("Address:[%p]\n", addr);
    printf("Address:[%p]\n", addr);
+   _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
   return (0);
 }
